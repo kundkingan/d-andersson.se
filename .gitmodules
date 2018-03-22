@@ -1,0 +1,6 @@
+[submodule "projects/tracker"]
+	path = projects/tracker
+	url = https://github.com/kundkingan/tracker
+[submodule "projects/cv"]
+	path = projects/cv
+	url = https://github.com/kundkingan/cv
