@@ -25,11 +25,7 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, 'start/dist/index.html'));
 });
 
-app.get('/cv', (req, res) => {
-	res.send('CV coming')
-});
-
-app.use('/tracker', routes);
+app.use('/projects', routes);
 app.use('/api/v1', api);
 app.set('port', port);
 
