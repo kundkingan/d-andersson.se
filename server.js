@@ -1,10 +1,22 @@
 const express = require('express');
 const path = require('path');
 const http = require('http');
+const https = require('https');
 const bodyParser = require('body-parser');
 const api = require('./api/api.js');
 const app = express();
 const port = process.env.PORT || '8080';
+
+const forceSSL = function() {
+  return function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect(['https://', req.get('Host'), req.url].join(''));
+    }
+    next();
+  }
+}
+
+app.use(forceSSL());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -30,4 +42,3 @@ const server = http.createServer(app);
 
 server.listen(port, () => console.log(port));
 
-module.exports = server;
