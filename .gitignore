@@ -46,3 +46,5 @@ Thumbs.db
 #Home
 ./start/node_modules
 package-lock.json
+.gitconfig
+.bash_history
