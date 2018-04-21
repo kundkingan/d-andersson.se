@@ -9,9 +9,10 @@ const port = process.env.PORT || '8080';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use('/',express.static(path.join(__dirname, 'start/dist')));
+app.use('/', express.static(path.join(__dirname, 'start/dist')));
 app.use('/projects/tracker', express.static(path.join(__dirname, 'projects/tracker/dist')));
 app.use('/projects/cv', express.static(path.join(__dirname, 'projects/cv/dist')));
+app.use('/projects/cointrack', express.static(path.join(__dirname, 'projects/cointrack/dist')));
 
 app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 	res.set('Access-Control-Allow-Credentials', 'true');
 	next();
 });
+
 
 app.use('/api/v1', api);
 app.set('port', port);

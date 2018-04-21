@@ -21,19 +21,39 @@
 # Registers:
 
 # File marks:
-'0  51  3  ~/.gitignore
-'1  50  4  ~/.gitignore
+'0  48  16  ~/.gitignore
+'1  9  45  ~/.gitmodules
+'2  6  38  ~/.gitmodules
+'3  49  3  ~/.gitignore
 
 # Jumplist (newest first):
--'  51  3  ~/.gitignore
+-'  48  16  ~/.gitignore
 -'  1  0  ~/.gitignore
+-'  9  45  ~/.gitmodules
+-'  1  0  ~/.gitmodules
+-'  6  38  ~/.gitmodules
+-'  49  3  ~/.gitignore
+-'  9  45  ~/.gitmodules
+-'  1  0  ~/.gitmodules
+-'  6  38  ~/.gitmodules
+-'  51  3  ~/.gitignore
 -'  50  4  ~/.gitignore
 
 # History of marks within files (newest to oldest):
 
 > ~/.gitignore
-	"	51	3
-	^	51	4
-	.	51	3
-	+	50	5
-	+	51	3
+	"	48	16
+	^	48	17
+	.	48	17
+	+	48	34
+	+	49	3
+	+	53	0
+	+	51	0
+	+	48	17
+
+> ~/.gitmodules
+	"	9	45
+	^	9	46
+	.	9	45
+	+	6	39
+	+	9	45
