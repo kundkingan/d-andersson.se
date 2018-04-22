@@ -8,12 +8,6 @@ const app = express();
 const port = process.env.PORT || '8080';
 const fs = require('fs');
 
-
-const options = {
-  key: fs.readFileSync('cert/key.pem'),
-  cert: fs.readFileSync('cert/cert.pem')
-};
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -34,7 +28,6 @@ app.use((req, res, next) => {
 app.use('/api/v1', api);
 app.set('port', port);
 
-app.listen(8000)
+http.createServer(app).listen(port);
 
-https.createServer(options, app).listen(8080);
-
+console.log('live')
