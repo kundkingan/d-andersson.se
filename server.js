@@ -1,7 +1,5 @@
 const express = require('express');
 const path = require('path');
-const http = require('http');
-const https = require('https');
 const bodyParser = require('body-parser');
 const api = require('./api/api.js');
 const app = express();
@@ -28,6 +26,6 @@ app.use((req, res, next) => {
 app.use('/api/v1', api);
 app.set('port', port);
 
-http.createServer(app).listen(port);
+app.listen(port)
 
 console.log('live')
