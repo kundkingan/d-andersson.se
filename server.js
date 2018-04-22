@@ -6,17 +6,13 @@ const bodyParser = require('body-parser');
 const api = require('./api/api.js');
 const app = express();
 const port = process.env.PORT || '8080';
+const fs = require('fs');
 
-const forceSSL = function() {
-  return function (req, res, next) {
-    if (req.headers['x-forwarded-proto'] !== 'https') {
-      return res.redirect(['https://', req.get('Host'), req.url].join(''));
-    }
-    next();
-  }
-}
 
-app.use(forceSSL());
+const options = {
+  key: fs.readFileSync('cert/key.pem'),
+  cert: fs.readFileSync('cert/cert.pem')
+};
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -38,7 +34,7 @@ app.use((req, res, next) => {
 app.use('/api/v1', api);
 app.set('port', port);
 
-const server = http.createServer(app);
+app.listen(8000)
 
-server.listen(port, () => console.log(port));
+https.createServer(options, app).listen(8080);
 
