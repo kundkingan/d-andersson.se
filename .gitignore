@@ -55,4 +55,5 @@ package-lock.json
 .npm/_cacache/
 .npm/node-sass/
 .rnd
+.viminfo
 
