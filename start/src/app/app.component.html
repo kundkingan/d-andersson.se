@@ -1,20 +1,44 @@
+
 <main>
-	<mat-card>
-		<a href="https://cv.d-andersson.se">
-			<h3 _ngcontent-c0="">CV</h3>
-		</a>
-	</mat-card>
+	<div class="top">
+		<section class="t-title">
+			<span class="logo">D/A</span>
+			<p class="name">David Andersson</p>
+		</section>
 
-	<mat-card>
-		<a href="https://wt.d-andersson.se">
-			<h3 _ngcontent-c0="">Weight Tracker</h3>
-		</a>
-	</mat-card>
+		<section class="t-header">
+			<span>Developer.</span>
+		</section>
 
-	<mat-card>
-		<a href="https://cointrack.d-andersson.se">
-			<h3 _ngcontent-c0="">Coin Tracker</h3>
-		</a>
-	</mat-card>
+		<section class="t-button">
+			<div class="b-resume">
+				<a href="https://cv.d-andersson.se" target="_blank">RESUME</a>
+			</div>
+		</section>
+	</div>
 
+	<div class="bottom">
+		<mat-divider></mat-divider>
+
+		<div class="b-header">
+			<span>Portfolio</span>
+		</div>
+
+		<section class="b-portfolio">
+			<div class="p-project" *ngFor="let proj of projects" (click)="onProject(proj.link)">
+				<div class="p-header">
+					<span>{{proj.type}}</span>
+				</div>
+				<div class="p-description">
+					<span>{{proj.name}}</span>
+				</div>
+				<div class="p-tech">
+					<span *ngFor="let t of proj.tech">
+						{{t}}
+					</span>
+				</div>
+			</div>
+		</section>
+	</div>
 </main>
+

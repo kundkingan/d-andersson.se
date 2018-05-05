@@ -1,25 +1,172 @@
-
+@import '../variables.scss';
 
 main {
-
-	max-width: 60%;
+	height: 100%;
+	width: 100%;
 	margin: 0 auto;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	text-align: center;
+	position: relative;
 
-	& > * {
-		flex: 1;
-		margin: 18px;
-		background-color: rgba(68,84,97,.65);
+	& > * { margin: 0 auto }
 
-		&:hover {
-			cursor: pointer;
-			background-color: #445461;
-			-webkit-transition: background-color .5s;
-			transition: background-color .5s;
-		}
+	.top {
+		max-width: 50%;
+		text-align: center;
 	}
 
+	.bottom {
+		max-width: 900px;
+		padding: 0 26px 0 26px;
+	}
 }
+
+.t-title {
+	padding-top: 5px;
+	.logo { font-size: 46px }
+	.name {
+		font-size: 12px;
+		font-style: italic;
+		margin-top: 0;
+	}
+}
+
+.t-header {
+	margin-top: 56px;
+	span { font-size: 36px }
+}
+
+.t-button {
+	margin-top: 28px;
+	.b-resume {
+		width: 150px;
+    margin: 0 auto;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    border: 3px solid $color-main-white;
+    border-radius: 5px;
+
+    a {
+    	font-weight: 500;
+	    letter-spacing: $text-letter-spacing;
+    }
+
+    &:hover {
+    	cursor: pointer;
+	    background-color: $color-main-white;
+    	a { color: #1d1d1d }
+    }
+	}
+}
+
+mat-divider {
+	margin: 56px 0 0 0;
+  border-color: $color-main-white;
+}
+
+.b-header {
+	margin: 16px;
+	font-size: 26px;
+	letter-spacing: $text-letter-spacing;
+}
+
+.p-project {
+	text-align: center;
+	letter-spacing: $text-letter-spacing;
+	background-color: #97a1a082;
+	border-radius: 5px;
+	margin: 0 10px 0 10px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+
+	& > * { padding: 15px }
+
+	&:hover {
+		cursor: pointer;
+		border: 2px solid $color-main-white;
+		-webkit-transition: border-color .5s;
+		transition: border-color .5s;
+	}
+
+	.p-header {
+    font-size: 12px;
+    font-style: italic;
+	}
+
+	.p-tech {
+		font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+		span {
+	    background-color: $color-main-white;
+	    color: rgba(0, 0, 0, 0.87);
+	    padding: 7px;
+	    margin: 5px;
+	    border-radius: 24px;
+		}
+	}
+}
+
+.b-footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+@media all and (min-width: 670px) {
+	.b-portfolio {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+
+		& > * {
+			flex: 1 0 30%;
+			max-width: 30%;
+			min-width: 280px;
+			margin-top: 28px;
+	  }
+	}
+}
+
+@media all and (max-width: 669px) {
+	.p-project { margin: 0 0 28px 0; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// main {
+
+// 	max-width: 60%;
+// 	margin: 0 auto;
+// 	display: -webkit-box;
+// 	display: -ms-flexbox;
+// 	display: flex;
+// 	text-align: center;
+
+// 	& > * {
+// 		flex: 1;
+// 		margin: 18px;
+// 		background-color: rgba(68,84,97,.65);
+
+// 		&:hover {
+// 			cursor: pointer;
+// 			background-color: #445461;
+// 			-webkit-transition: background-color .5s;
+// 			transition: background-color .5s;
+// 		}
+// 	}
+
+// }
