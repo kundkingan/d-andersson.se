@@ -9,12 +9,14 @@ body {
   margin: 0;
   padding: 0;
   color: $color-main-white;
-  background-color: #3a3a3a;
-  font-family: Roboto, Arial, sans-serif
+  font-family: Roboto, Arial, sans-serif;
 }
 
-body {
-  background: url('assets/wallpaper.jpg') center center/cover fixed;
+html {
+  width: 100%;
+  height: 100%;
+  background: #3a3a3a url('assets/wallpaper.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 a {
