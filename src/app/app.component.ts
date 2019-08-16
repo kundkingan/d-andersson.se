@@ -10,19 +10,19 @@ export class AppComponent {
     {
       type: 'Web Application',
       name: 'Online Resume',
-      link: 'https://cv.d-andersson.se',
+      link: 'https://maintenance.d-andersson.se',
       tech: ['Angular', 'Firebase', 'SCSS']
     },
     {
       type: 'Progressive Web Application',
       name: 'Weight Tracker',
-      link: 'https://wt.d-andersson.se',
+      link: 'https://maintenance.d-andersson.se',
       tech: ['Angular', 'Firebase', 'SCSS']
     },
     {
       type: 'Progressive Web Application',
       name: 'Crypto Tracker',
-      link: 'https://cointrack.d-andersson.se',
+      link: 'https://maintenance.d-andersson.se',
       tech: ['Angular', 'Firebase', 'SCSS', 'NodeJS']
     }
   ];
